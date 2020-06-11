@@ -1,2 +1,5 @@
-## Calculator
-###### JS - Project
+## Calculator Project 
+
+- HTML
+- CSS
+- JavaScript (in process)
