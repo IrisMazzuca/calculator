@@ -42,7 +42,7 @@ button:hover {
 
 .calculator {
     width: 286px;
-    height: 432px;
+    height: 373px;
     background: #FF512F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -52,11 +52,12 @@ button:hover {
 }
 
 .result {
-    height: 25%;
+    height: 30%;
+    padding-bottom: 1rem;
 }
 
 .keyboard {
-    height: 75%;
+    height: 70%;
 }
 
 .preview, .output {
@@ -67,11 +68,11 @@ button:hover {
     color: rgba(255, 255, 255, 0.65);
 }
 
-.output {
-    font-size: 3rem;
+.preview {
+    padding: 1rem 0;
+    font-size: 1.5rem;
 }
 
-.empty {
-    border: none;
-    color: transparent;
+.output {
+    font-size: 3.8rem;
 }

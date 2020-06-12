@@ -11,29 +11,26 @@
         <div class="calculator">
             <div class="result" id="result">
                 <div class="preview" id="preview"></div>
-                <div class="output" id="output">0</div>
+                <div class="output" id="output"></div>
             </div>
             <div class="keyboard" id="keyboard">
-                    <button onclick="clear()" value="clear">C</button>
-                    <button onclick="backspace()" value="backspace">CE</button>
-                    <button onclick="operator()" value="%">%</button>
-					<button onclick="operator()" value="/">/</button>
-					<button onclick="number(7)" value="7">7</button>
-					<button onclick="number(8)" value="8">8</button>
-					<button onclick="number(9)" value="9">9</button>
-					<button onclick="operator()" value="*">*</button>
-					<button onclick="number(4)" value="4">4</button>
-					<button onclick="number(5)" value="5">5</button>
-					<button onclick="number(6)" value="6">6</button>
-					<button onclick="operator()" value="-">-</button>
-					<button onclick="number(1)" value="1">1</button>
-					<button onclick="number(2)" value="2">2</button>
-					<button onclick="number(3)" value="3">3</button>
-					<button onclick="operator()" value="+">+</button>
-					<button class="empty">-</button>
-					<button onclick="number(0)" value="0">0</button>
-					<button class="empty">-</button>
-                    <button onclick="calculate()" value="=">=</button>
+
+					<button onclick="input(7)" value="7">7</button>
+					<button onclick="input(8)" value="8">8</button>
+					<button onclick="input(9)" value="9">9</button>
+					<button id="multiplication">*</button>
+					<button onclick="input(4)" value="4">4</button>
+					<button onclick="input(5)" value="5">5</button>
+					<button onclick="input(6)" value="6">6</button>
+					<button id="subtraction">-</button>
+					<button onclick="input(1)" value="1">1</button>
+					<button onclick="input(2)" value="2">2</button>
+					<button onclick="input(3)" value="3">3</button>
+					<button id="sum">+</button>
+					<button onclick="input(0)" value="0">0</button>
+                    <button id="equal">=</button>
+                    <button id="reset">C</button>
+					<button id="division">/</button>
             </div>
         </div>
     </div>
