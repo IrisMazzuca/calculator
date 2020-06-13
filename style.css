@@ -11,15 +11,22 @@ body {
 }
 
 button {
-    width: 72px;
-    height: 65px;
+    width: 73px;
+    height: 55px;
     outline: none;
-    border: 1.2px solid rgba(199, 188, 188, 0.35);
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.65);
+    border: none;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-weight: bold;
-    margin-right: -.3rem;
+    margin-bottom: .2rem;
+}
+
+.black {
+    background-color:rgb(27, 27, 27, 0.7);
+}
+
+.orange {
+    background-color: rgb(255, 166, 0, 0.7);
 }
 
 button:hover {
@@ -41,23 +48,23 @@ button:hover {
 }
 
 .calculator {
-    width: 286px;
-    height: 373px;
-    background: #FF512F;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 314px;
+    height: 400px;
+    background: #1b1b1b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #1b1b1b, #aca4a8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #1b1b1b, #aca4a8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .result {
-    height: 30%;
-    padding-bottom: 1rem;
+    height: 40%;
+    padding: 1rem;
 }
 
 .keyboard {
-    height: 70%;
+    height: 60%;
+    padding: .3rem;
 }
 
 .preview, .output {
@@ -69,7 +76,7 @@ button:hover {
 }
 
 .preview {
-    padding: 1rem 0;
+    padding: 1rem auto;
     font-size: 1.5rem;
 }
 
