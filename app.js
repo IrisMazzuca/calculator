@@ -7,8 +7,8 @@ const division = document.getElementById("division");
 const equal = document.getElementById("equal");
 const reset = document.getElementById("reset");
 
-let valueA;
-let valueB;
+let valueA = 0;
+let valueB = 0;
 let operator;
 
 const input = (element) => {
@@ -21,8 +21,8 @@ const input = (element) => {
 reset.onclick = () => {
     preview.textContent = "";
     output.textContent = "" ;
-    valueA = "";
-    valueB = "";
+    valueA = 0;
+    valueB = 0;
     operator = "";
 };
 
@@ -30,11 +30,26 @@ const clearOutput = () => {
     output.textContent = "" ;
 };
 
+const blockOperators = () => {
+    multiplication.disabled = true;
+    subtraction.disabled = true;
+    sum.disabled = true;
+    division.disabled = true;
+}
+
+const unblockOperators = () => {
+    multiplication.disabled = false;
+    subtraction.disabled = false;
+    sum.disabled = false;
+    division.disabled = false;
+}
+
 multiplication.onclick = () => {
     preview.textContent = preview.textContent + '*';
     valueA = output.textContent;
     operator = '*';
     clearOutput();
+    blockOperators();
 };
 
 subtraction.onclick = () => {
@@ -42,6 +57,7 @@ subtraction.onclick = () => {
     valueA = output.textContent;
     operator = '-';
     clearOutput();
+    blockOperators();
 };
 
 sum.onclick = () => {
@@ -49,6 +65,7 @@ sum.onclick = () => {
     valueA = output.textContent;
     operator = '+';
     clearOutput();
+    blockOperators();
 };
 
 division.onclick = () => {
@@ -56,9 +73,11 @@ division.onclick = () => {
     valueA = output.textContent;
     operator = '/';
     clearOutput();
+    blockOperators();
 };
 
 const calculate = () => {
+
     let result = 0;
     switch(operator) {
         case '*':
@@ -76,14 +95,19 @@ const calculate = () => {
         default:
             console.log('error');
     }
-    output.textContent = result;
-}; 
 
+    if (result === Infinity) {
+        output.textContent = 'Error';
+    } else {
+    output.textContent = result;
+    }
+}; 
 
 equal.onclick = () => {
     valueB = output.textContent;
     preview.textContent = "";
     calculate();
+    unblockOperators();
 };
 
 
